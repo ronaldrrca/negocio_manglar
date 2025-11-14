@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#4CAF50"/> 
+
+  <path d="M190 10C190 59.7056 149.706 100 100 100L10 10C10 59.7056 50.2944 100 100 100C149.706 100 190 59.7056 190 10Z" fill="rgba(0,0,0,0.1)" transform="translate(0 0) rotate(45 100 100)"/>
+
+  <g transform="rotate(-10 100 100)">
+    <circle cx="80" cy="80" r="20" fill="#FFEB3B"/> 
+    <path d="M80 100L80 80L90 90L80 100Z" fill="#FBC02D"/> 
+    <line x1="80" y1="100" x2="60" y2="120" stroke="white" stroke-width="2"/>
+
+    <circle cx="120" cy="80" r="20" fill="#F44336"/> 
+    <path d="M120 100L120 80L130 90L120 100Z" fill="#D32F2F"/> 
+    <line x1="120" y1="100" x2="100" y2="120" stroke="white" stroke-width="2"/>
+
+    <circle cx="100" cy="110" r="20" fill="#2196F3"/> 
+    <path d="M100 130L100 110L110 120L100 130Z" fill="#1976D2"/> 
+    <line x1="100" y1="130" x2="80" y2="150" stroke="white" stroke-width="2"/>
+
+    <rect x="50" y="70" width="5" height="15" fill="#FFEB3B" transform="rotate(30 50 70)"/>
+    <rect x="140" y="60" width="5" height="15" fill="#F44336" transform="rotate(-20 140 60)"/>
+    <rect x="150" y="100" width="5" height="15" fill="#2196F3" transform="rotate(10 150 100)"/>
+
+    <path d="M70 140 C60 135 65 125 75 130 C85 135 80 145 70 140Z" fill="#F44336" transform="rotate(20 70 140)"/>
+    <path d="M120 70 C110 65 115 55 125 60 C135 65 130 75 120 70Z" fill="#FFEB3B" transform="rotate(-15 120 70)"/>
+    <path d="M60 90 C50 85 55 75 65 80 C75 85 70 95 60 90Z" fill="#2196F3" transform="rotate(40 60 90)"/>
+  </g>
+</svg>
