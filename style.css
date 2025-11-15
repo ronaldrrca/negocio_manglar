@@ -1,7 +1,16 @@
+:root {
+    --primary-color: #2E4E51;
+    --secundary-color: #EBEBEB; 
+    --white-font: #FFFFFF;
+    --black-font: #333333;
+    --gray-font: #CCCCCC;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html {
@@ -23,12 +32,14 @@ header {
     height: auto;
     padding: 2rem 0;
     gap: 2rem;
-    background-color: #2E4E51;
+    background-color: var(--primary-color);
 }
 
 main {
     width: 100%;
     max-width: 150rem;
+    min-height: 100dvh;
+    background-color: var(--secundary-color);
 }
 
 .header_info {
@@ -40,13 +51,20 @@ main {
 
 h1 {
     font-size: 2rem;
-    color: #FFFFFF;
+    color: var(--white-font);
+}
+
+h2 {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    color: var(--black-font);
 }
 
 .solo_domicilios {
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
-    color: #FFFFFF;
+    color: var(--white-font);
     font-weight: bold;
     font-style: italic;
 }
@@ -54,7 +72,7 @@ h1 {
 .horario {
     display: inline-block;
     font-size: 1.4rem;
-    color: #ccc;
+    color: var(--gray-font);
 }
 
 .horario_info {
@@ -67,6 +85,71 @@ h1 {
 .horario_slash {
     display: none;
 }
+
+.contenedor_buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #FFFFFF;
+}
+
+.buscador {
+    display: flex;
+    position: relative;
+}
+
+.buscador input[type="search"] {
+    width: 30rem;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    background-color: var(--secundary-color);
+    color: var(--black-font);
+    border: 2px #333333;
+}
+
+#boton_buscar {
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    background: none;
+}
+
+#categorias {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 1rem 0 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 11rem;
+    height: 11rem;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.categoria img {
+    width: 5rem;
+}
+
+.categoria span {
+    font-size: 1.2rem;
+    color: var(--black-font);
+    text-align: center;
+}
+
 
 
 @media (min-width: 760px) {
@@ -89,7 +172,12 @@ h1 {
     .horario_slash {
         display: block;
         font-size: 1.6rem;
-        color: #FFFFFF;
+        color: var(--white-font);
+    }
+
+    .buscador input[type="search"] {
+        padding: 1rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -97,6 +185,10 @@ h1 {
 @media (min-width: 1200px) {
     h1 {
         font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     .solo_domicilios {
@@ -114,6 +206,30 @@ h1 {
     .horario_slash {
         display: block;
         font-size: 1.8rem;
-        color: #FFFFFF;
+        color: var(--white-font);
     }
+
+    .categorias {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .categoria {
+        width: 13rem;
+        height: 13rem;
+        transition: all 0.3s;
+    }
+
+    .categoria:hover {
+        box-shadow: 10px 10px 5px var(--primary-color)
+    }
+
+    .categoria img {
+        width: 7rem;
+    }
+
+    .categoria span {
+        font-size: 1.4rem;
+    }
+
 }

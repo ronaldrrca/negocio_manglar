@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+  <circle cx="100" cy="100" r="90" fill="#4CAF50"/> 
+
+  <path d="M190 10C190 59.7056 149.706 100 100 100L10 10C10 59.7056 50.2944 100 100 100C149.706 100 190 59.7056 190 10Z" fill="rgba(0,0,0,0.1)" transform="translate(0 0) rotate(45 100 100)"/>
+
+  <g transform="rotate(-15 100 100)">
+    
+    <circle cx="100" cy="100" r="40" fill="#B0BEC5"/> 
+    <circle cx="100" cy="100" r="20" fill="#FFFFFF"/> 
+
+    
+    <g fill="#B0BEC5">
+      <rect x="130" y="90" width="15" height="20"/> 
+      <rect x="55" y="90" width="15" height="20"/> 
+      <rect x="90" y="55" width="20" height="15"/> 
+      <rect x="90" y="130" width="20" height="15"/> 
+      
+      <rect x="117" y="65" width="15" height="15" transform="rotate(45 117 65)"/> 
+      <rect x="110" y="105" width="15" height="15" transform="rotate(-45 110 105)"/> 
+      <rect x="65" y="117" width="15" height="15" transform="rotate(45 65 117)"/> 
+      <rect x="70" y="60" width="15" height="15" transform="rotate(-45 70 60)"/> 
+    </g>
+
+    
+    <rect x="110" y="100" width="70" height="15" transform="rotate(45 110 100)" fill="#78909C"/>
+    <polygon points="175,95 185,100 175,105" transform="rotate(45 110 100)" fill="#546E7A"/> 
+    <rect x="110" y="90" width="20" height="35" transform="rotate(45 110 100)" fill="#546E7A"/> 
+  </g>
+</svg>

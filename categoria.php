@@ -16,10 +16,11 @@
                 <button id="boton_buscar" type="submit"><img src="./imagenes/imagenes_sitio/icono-lupa.svg" alt="icono de lupa"></button>
             </form>
         </div>
+        <h2 id="titulo_categoria"></h2>
         <?php include './categorias.php'; ?>
     </main>
     <footer></footer>
     
-    <script src="./index.js"></script>
+    <script src="./categoria.js"></script>
 </body>
 </html>
