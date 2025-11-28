@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #2E4E51;
+    --primary-color: #213D43;
     --secundary-color: #EBEBEB; 
     --white-font: #FFFFFF;
     --black-font: #333333;
@@ -30,9 +30,19 @@ header {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 2rem 0;
-    gap: 2rem;
+    padding: 1rem 0;
     background-color: var(--primary-color);
+}
+
+header h1 {
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
+
+.logo_header_horizontal {
+    width: 30rem;
 }
 
 main {
@@ -40,13 +50,20 @@ main {
     max-width: 150rem;
     min-height: 100dvh;
     background-color: var(--secundary-color);
+    margin: 0 auto;
+    padding-bottom: 2rem;
 }
 
-.header_info {
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+footer span {
+    text-align: center;
 }
 
 h1 {
@@ -56,14 +73,14 @@ h1 {
 
 h2 {
     text-align: center;
-    padding-top: 2rem;
+    /* margin: 2rem; */
     font-size: 1.6rem;
     color: var(--black-font);
 }
 
 .solo_domicilios {
     margin-bottom: 0.8rem;
-    font-size: 1.4rem;
+    font-size: 1.42em;
     color: var(--white-font);
     font-weight: bold;
     font-style: italic;
@@ -111,40 +128,53 @@ h2 {
 #boton_buscar {
     border: none;
     position: absolute;
-    right: 10px;
+    right: -30px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.4rem;
     background: none;
 }
 
+.categorias_categoria_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 10rem;
+    height: auto;
+    
+}
+
 #categorias {
     display: flex;
     justify-content: space-around;
-    padding: 3rem 1rem 0 1rem;
+    align-items: flex-start;
+    padding: 1rem;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    
 }
 
 .categoria {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 11rem;
-    height: 11rem;
-    gap: 0.5rem;
+    width: 8rem;
+    height: 8rem;
     padding: 1rem;
     background-color: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 50%;
+    border: 5px solid #CCCCCC;
+    transition: all 0.3s;
 }
 
 .categoria img {
-    width: 5rem;
+    width: 100%;
 }
 
-.categoria span {
+.categorias_categoria_container span {
     font-size: 1.2rem;
     color: var(--black-font);
     text-align: center;
@@ -152,7 +182,63 @@ h2 {
 
 
 
-@media (min-width: 760px) {
+#seccion_resultados {
+    display: none;
+    flex-direction: column;
+
+}
+
+.articulos_destacados, .resultados_busqueda {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 1rem 0 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+.articulos_destacados_titulo {
+    margin-top: 5rem;
+}
+
+.card_articulos {
+    display: flex;
+    flex-direction: column;
+    width: 19rem;
+    height: auto;
+    background-color: #FFFFFF;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px #aaaaaa;
+    transition: all 0.3s;
+}
+
+.card_articulos_img {
+    width: 100%;
+}
+
+.card_articulos_nombre {
+    font-size: 1.2rem;
+    color: var(--black-font);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número máximo de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_articulos_precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1277FA;
+}
+
+
+/*---------- Media Queris ----------*/
+
+/* >768P */
+@media (min-width: 768px) {
     h1 {
         font-size: 2.2rem;
     }
@@ -179,9 +265,10 @@ h2 {
         padding: 1rem;
         font-size: 1.6rem;
     }
+
 }
 
-
+/* >1200P */
 @media (min-width: 1200px) {
     h1 {
         font-size: 2.4rem;
@@ -215,21 +302,27 @@ h2 {
     }
 
     .categoria {
-        width: 13rem;
-        height: 13rem;
+        width: 10rem;
+        height: 10rem;
         transition: all 0.3s;
     }
 
     .categoria:hover {
-        box-shadow: 10px 10px 5px var(--primary-color)
-    }
-
-    .categoria img {
-        width: 7rem;
+        background-color: #aaaaaa;
     }
 
     .categoria span {
         font-size: 1.4rem;
     }
 
+    .card_articulos_nombre {
+        font-size: 1.4rem;
+
+    }
+
+    .card_articulos_precio {
+        font-size: 1.6rem;
+    }
+
+   
 }

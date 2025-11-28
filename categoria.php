@@ -19,7 +19,7 @@
         <h2 id="titulo_categoria"></h2>
         <?php include './categorias.php'; ?>
     </main>
-    <footer></footer>
+    <footer><?php require './footer.php';?></footer>
     
     <script src="./categoria.js"></script>
 </body>

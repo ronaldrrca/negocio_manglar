@@ -1,0 +1,8 @@
+buscar
+SELECT * FROM articulos WHERE nombre_articulos LIKE CONCAT('%', p_termino_busqueda, '%') and `disponobilidad_articulos` = 1 ORDER BY nombre_articulos
+
+verArticulos
+SELECT * FROM `articulos` WHERE `disponobilidad_articulos` = 1 ORDER BY nombre_articulos
+
+verArticulosDestacados
+SELECT * FROM `articulos` WHERE `destacado_articulos` = 1 and `disponobilidad_articulos` = 1 ORDER BY nombre_articulos

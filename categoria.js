@@ -1,12 +1,10 @@
-// Obtener la URL completa
-const url = window.location.href;
-
 // Crear un objeto URL para analizarla
 const urlParams = new URLSearchParams(window.location.search);
 
 // Obtener el valor del parámetro 'cat'
 let categoria = urlParams.get('cat');
 
+//Dependiendo del valoor de la variable categoría asignamos el subtitulo correspondiente
 switch (categoria) {
     case "papeleria-y-utiles-escolares":
         document.getElementById("titulo_categoria").innerHTML = "Papelería y útiles escolares";
@@ -24,7 +22,7 @@ switch (categoria) {
         document.getElementById("titulo_categoria").innerHTML = "Cuidado personal";
         break;
     case "farmacia":
-        document.getElementById("titulo_categoria").innerHTML = "farmacia";
+        document.getElementById("titulo_categoria").innerHTML = "Farmacia";
         break;
     default:
         break;
