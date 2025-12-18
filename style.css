@@ -66,6 +66,7 @@ main {
     background-color: var(--secundary-color);
     margin: 0 auto;
     padding-bottom: 2rem;
+    position: relative;
 }
 
 footer {
@@ -75,6 +76,24 @@ footer {
     align-items: center;
     background-color: var(--primary-color);
     padding: 2rem 0;
+}
+
+#domicilio_flotante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 0;
+    padding: 0.3rem 1rem;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+#domicilio_flotante img{
+    width: 4rem;
+    height: auto;
 }
 
 footer span {
@@ -98,10 +117,25 @@ h2 {
 }
 
 #header_seccion {
-    /* position: relative; */
     width: 100%;
     display: flex;
+    /* flex-direction: row; */
     justify-content: space-between;
+}
+
+#header_inline {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#header_domicilio {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: #FFFFFF;
 }
 
 .solo_domicilios {
@@ -162,6 +196,22 @@ h2 {
     transform: translateY(-50%); */
     font-size: 1.4rem;
     background: none;
+}
+
+#buscador_movil {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#buscador_pc {
+    display: none;
+}
+
+#header_pc {
+    width: 50%;
 }
 
 #menu {
@@ -303,6 +353,20 @@ h2 {
         padding: 2rem 4rem;
     }
 
+    #header_domicilio {
+        display: flex;
+    }
+
+     #header_domicilio img {
+        width: 4rem;
+        height: auto;
+    }
+
+    #domicilio_flotante {
+        display: none;
+    }
+
+
 }
 
 /* >1200P */
@@ -311,20 +375,22 @@ h2 {
     header {
         flex-direction: column;
         gap: 2rem;
+        padding-bottom: 0;
     }
 
     #header_seccion {
         position: static;
         justify-content: center;
-        padding-right: 0rem;
+        padding: 0rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
     } 
 
     .contenedor_buscador {
         margin: 0;
-        width: 50%;
+        width: 100%;
     }
 
     #banner_movil {
@@ -409,6 +475,20 @@ h2 {
        #icono_menu {
         display: none;
     }
+
+    #buscador_movil {
+        display: none;
+    }
+
+    #buscador_pc {
+        display: flex;
+        width: 40%;
+    }
+
+    
+   
+
+ 
 
    
    

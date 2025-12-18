@@ -17,7 +17,10 @@
             <h2 class="articulos_destacados_titulo">Artículos destacados</h2>
             <section id="articulos_destacados" class="articulos_destacados"></section>
         </div>
-        
+        <div id="domicilio_flotante">
+            <img src="./imagenes/imagenes_sitio/carrito.png" alt="carrito de compras">
+            <span>Domicilio gratis <br> en Manglar</span>    
+        </div>
     </main>
     <footer><?php include './footer.php' ?></footer>
     <script src="./js/header.js"></script>
