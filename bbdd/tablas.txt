@@ -3,6 +3,7 @@ nombre_articulos text
 descripcion_articulos text
 precio_articulos int(10)
 imagen_articulos varchar(50)
+alt_articulos varchar(50)
 categoria_articulos varchar(50)
 disponobilidad_articulos boolean
 destacado_articulos boolean

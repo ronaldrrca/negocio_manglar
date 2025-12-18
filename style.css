@@ -25,24 +25,38 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     width: 100%;
     height: auto;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
 }
 
-header h1 {
-    text-align: center;
-    padding: 0 2rem;
-    font-size: 1.4rem;
-    color: #FFFFFF;
+#nav {
+    position: absolute;
+    top: 2;
+    right: 0;
+    display: flex;
+    width: 100%;
 }
 
 .logo_header_horizontal {
-    width: 30rem;
+    width: 24rem;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+#banner_movil {
+    display: block;
+}
+
+#banner_pc {
+    display: none;
 }
 
 main {
@@ -58,6 +72,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: var(--primary-color);
     padding: 2rem 0;
 }
@@ -67,15 +82,26 @@ footer span {
 }
 
 h1 {
-    font-size: 2rem;
-    color: var(--white-font);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #FFFFFF;
+    font-size: 1.6rem;
+    color: var(--black-font);
 }
 
 h2 {
+    margin-top: 5rem;
     text-align: center;
-    /* margin: 2rem; */
     font-size: 1.6rem;
     color: var(--black-font);
+}
+
+#header_seccion {
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .solo_domicilios {
@@ -106,81 +132,83 @@ h2 {
 .contenedor_buscador {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-    background-color: #FFFFFF;
+    align-items: center;    
+    background-color: var(--primary-color);
+    width: 80%;
+    margin-top: 2rem;
 }
 
 .buscador {
+    width: 100%;
     display: flex;
-    position: relative;
+    gap: 0.5rem;
 }
 
 .buscador input[type="search"] {
-    width: 30rem;
+    width: 100%;
     padding: 0.8rem;
     font-size: 1.4rem;
     background-color: var(--secundary-color);
     color: var(--black-font);
     border: 2px #333333;
+    border-radius: 5px;
 }
 
 #boton_buscar {
     border: none;
-    position: absolute;
+    /* position: absolute;
     right: -30px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
     font-size: 1.4rem;
     background: none;
 }
 
-.categorias_categoria_container {
-    display: flex;
+#menu {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    width: 10rem;
+    justify-content: space-around;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    background-color: #FFFFFF;
+}
+
+#menu li {
+    list-style: none;
+    width: 100%;
     height: auto;
     
 }
 
-#categorias {
+#menu li a {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 1rem;
-    flex-wrap: wrap;
-    gap: 2rem;
-    
-}
-
-.categoria {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
-    height: 8rem;
-    padding: 1rem;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    border: 5px solid #CCCCCC;
-    transition: all 0.3s;
-}
-
-.categoria img {
     width: 100%;
-}
-
-.categorias_categoria_container span {
-    font-size: 1.2rem;
+    padding: 1rem;
+    font-size: 1.6rem;
     color: var(--black-font);
-    text-align: center;
+    justify-content: center;
 }
 
+#icono_menu {
+    display: flex;
+    width: 3rem;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
 
+#icono_cerrar_menu {
+    display: none;
+    width: 3rem;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
 
 #seccion_resultados {
     display: none;
@@ -188,18 +216,19 @@ h2 {
 
 }
 
-.articulos_destacados, .resultados_busqueda {
+.articulos_destacados, .resultados_busqueda, #categoria, #contenedor_articulo {
     display: flex;
     justify-content: space-around;
     padding: 3rem 1rem 0 1rem;
     flex-wrap: wrap;
     gap: 2rem;
-    
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
-.articulos_destacados_titulo {
+/* .articulos_destacados_titulo {
     margin-top: 5rem;
-}
+} */
 
 .card_articulos {
     display: flex;
@@ -240,8 +269,12 @@ h2 {
 /* >768P */
 @media (min-width: 768px) {
     h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
+
+    #menu_movil li a {
+    justify-content: center;
+}
 
     .solo_domicilios {
         font-size: 1.6rem;
@@ -266,12 +299,46 @@ h2 {
         font-size: 1.6rem;
     }
 
+    header {
+        padding: 2rem 4rem;
+    }
+
 }
 
 /* >1200P */
 @media (min-width: 1200px) {
+
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #header_seccion {
+        position: static;
+        justify-content: center;
+        padding-right: 0rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .contenedor_buscador {
+        margin: 0;
+        width: 50%;
+    }
+
+    #banner_movil {
+        display: none;
+    }
+
+    #banner_pc {
+        display: block;
+        max-width: 150rem;
+    }
+
+
     h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     h2 {
@@ -296,33 +363,53 @@ h2 {
         color: var(--white-font);
     }
 
-    .categorias {
-        padding-left: 3rem;
-        padding-right: 3rem;
+    #nav {
+        position: static;
+        top: unset;
+        right: unset;
+        width: 100%;
+        background-color: var(--primary-color);
     }
 
-    .categoria {
-        width: 10rem;
-        height: 10rem;
-        transition: all 0.3s;
+    #menu {
+        position: static;
+        top: unset;
+        right: unset;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--primary-color);
     }
 
-    .categoria:hover {
-        background-color: #aaaaaa;
+    #menu li {
+        width: auto;
     }
-
-    .categoria span {
+   
+    #menu li a{
+        display: flex;
+        width: auto;
         font-size: 1.4rem;
+        padding: 0 0 3px 0;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s;
+        color: #FFFFFF;
+    }
+
+    #menu li a:hover {
+        border-bottom: 2px solid #FFFFFF;
     }
 
     .card_articulos_nombre {
         font-size: 1.4rem;
-
     }
 
     .card_articulos_precio {
         font-size: 1.6rem;
     }
 
+       #icono_menu {
+        display: none;
+    }
+
+   
    
 }

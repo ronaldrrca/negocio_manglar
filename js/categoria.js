@@ -29,3 +29,34 @@ switch (categoria) {
 }
 
 
+
+// --- Lógica de Carga artículos por categoría ---
+
+fetch(`./controlador/ver_articulos_por_categoria.php?categoria=${categoria}`)
+    .then(response => response.json())
+    .then(data => {
+        const listaArticulos = data.datos; 
+        
+        if (Array.isArray(listaArticulos)) {
+            listaArticulos.forEach(articulo => {
+                crearCard(
+                    articulo.id_articulos,
+                    articulo.imagen_articulos, 
+                    articulo.nombre_articulos, 
+                    articulo.precio_articulos, 
+                    "categoria"
+                );
+            });
+        } 
+    })
+    .catch(error => {
+        console.error("", error);
+    });
+
+
+
+
+
+
+
+

@@ -10,19 +10,21 @@
 <body>
     <header><?php require './header.php'; ?></header>
     <main>
-        <?php require './banner.php'  ?>   
-        <?php require './seccion_resultados.php'  ?> 
-        
-        <div id="seccion_por_defecto">
-            <h2 id="titulo_categoria"></h2>
-            <section id="categoria" class="categoria"></section>
+        <h1>Papelería - Miscelánea - y mucho más...</h1>        
+
+        <div id="seccion_resultados">
+            <h2 class="seccion_resultados_titulo">Tus resultados</h2>
+            <section id="resultados_busqueda" class="resultados_busqueda"></section>
+        </div>
+        <div id="contenedor_articulo">
+            <!-- <h2 id="titulo_categoria"></h2> -->
+            <!-- <section id="categoria" class="categoria"></section> -->
         </div>
         
     </main>
     <footer><?php require './footer.php';?></footer>
-    <script src="./js/header.js"></script>
     <script src="./js/crear_card.js"></script>
-    <script src="./js/categoria.js"></script>
+    <script src="./js/articulo.js"></script>
     <script src="./js/busqueda_articulos.js"></script>
 </body>
 </html>

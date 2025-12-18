@@ -2,9 +2,9 @@
 require_once '../modelo/articulos.php';
 header('Content-Type: application/json');
 
-$categoria = $_GET['categoria'];
+$id = $_GET['id'];
 $objArticulos = new Articulos();
-$resultado = $objArticulos->verArticulosPorCategoria($categoria);
+$resultado = $objArticulos->verArticulo($id);
 
 
 while ($fila = $resultado->fetch_assoc()) {
