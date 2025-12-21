@@ -10,6 +10,7 @@ fetch('./controlador/ver_articulos_destacados.php')
                 crearCard(
                     articulo.id_articulos,
                     articulo.imagen_articulos, 
+                    articulo.alt_articulos,
                     articulo.nombre_articulos, 
                     articulo.precio_articulos, 
                     "articulos_destacados"
@@ -21,4 +22,27 @@ fetch('./controlador/ver_articulos_destacados.php')
         console.error("Hubo un error en la solicitud fetch:", error);
     });
 
+
+
+fetch('./controlador/ver_articulos_nuevos.php')
+    .then(response => response.json())
+    .then(data => {
+        const listaArticulos = data.datos; 
+        
+        if (Array.isArray(listaArticulos)) {
+            listaArticulos.forEach(articulo => {
+                crearCard(
+                    articulo.id_articulos,
+                    articulo.imagen_articulos, 
+                    articulo.alt_articulos,
+                    articulo.nombre_articulos, 
+                    articulo.precio_articulos, 
+                    "articulos_nuevos"
+                );
+            });
+        } 
+    })
+    .catch(error => {
+        console.error("Hubo un error en la solicitud fetch:", error);
+    });
 

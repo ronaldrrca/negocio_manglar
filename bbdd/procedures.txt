@@ -6,3 +6,6 @@ SELECT * FROM `articulos` WHERE `disponobilidad_articulos` = 1 ORDER BY nombre_a
 
 verArticulosDestacados
 SELECT * FROM `articulos` WHERE `destacado_articulos` = 1 and `disponobilidad_articulos` = 1 ORDER BY nombre_articulos
+
+verArticulosNuevos
+SELECT * FROM `articulos` WHERE `nuevo_articulos`=1 and `disponobilidad_articulos`=1 LIMIT 6

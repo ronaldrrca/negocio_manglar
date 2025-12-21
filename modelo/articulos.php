@@ -74,6 +74,26 @@ class Articulos {
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 
+    public function verArticulosNuevos() {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->conectarse();
+        $sql = "CALL verArticulosNuevos()";
+        $stmt = $conexion->prepare($sql);
+    
+        if ($stmt === false) {
+            die("Error en la preparación de la consulta: " . $conexion->error);
+        }
+    
+        // Ejecutar y validar la consulta
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        
+        $stmt->close();
+        $conexion->close();
+    
+        return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
+    }
+
     public function verArticulosPorCategoria($categoria) {
         $this->categoria = $categoria;
 

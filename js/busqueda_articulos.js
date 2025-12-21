@@ -22,6 +22,7 @@ formulario_busqueda.addEventListener("submit", function(event){
                         crearCard(
                             articulo.id_articulos,
                             articulo.imagen_articulos, 
+                            articulo.alt_articulos,
                             articulo.nombre_articulos, 
                             articulo.precio_articulos, 
                             "resultados_busqueda"

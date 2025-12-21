@@ -16,11 +16,12 @@ function formatearPrecio(precio) {
 }
 
 // Función para crear un elemento Card (Tarjeta de producto)
-function crearCard(id_articulo, imagen_articulo, nombre_articulo, precio_articulo, contenedor_destino_articulo) {
+function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, precio_articulo, contenedor_destino_articulo) {
     //Elemento imagen de card
     const card_articulos_imagen = document.createElement("img");
     card_articulos_imagen.classList.add("card_articulos_img");
     card_articulos_imagen.setAttribute("src", "./imagenes/imagenes_productos/" + imagen_articulo);
+    card_articulos_imagen.setAttribute("alt", alt_articulo);
 
     //elemento nombre card
     const card_articulos_nombre = document.createElement("p");

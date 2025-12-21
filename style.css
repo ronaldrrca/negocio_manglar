@@ -78,6 +78,14 @@ footer {
     padding: 2rem 0;
 }
 
+#inicio_por_defecto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
 #domicilio_flotante {
     display: flex;
     justify-content: center;
@@ -190,12 +198,9 @@ h2 {
 
 #boton_buscar {
     border: none;
-    /* position: absolute;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%); */
-    font-size: 1.4rem;
     background: none;
+    font-size: 1.4rem;
+    cursor: pointer;
 }
 
 #buscador_movil {
@@ -266,7 +271,7 @@ h2 {
 
 }
 
-.articulos_destacados, .resultados_busqueda, #categoria, #contenedor_articulo {
+.articulos_destacados, .articulos_nuevos, .resultados_busqueda, #categoria, #contenedor_articulo {
     display: flex;
     justify-content: space-around;
     padding: 3rem 1rem 0 1rem;
