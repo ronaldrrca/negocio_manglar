@@ -1,42 +1,42 @@
-// --- Manejo de la Búsqueda de Artículos ---
+// Seleccionamos todos los formularios que tengan esa clase
+const formularios = document.querySelectorAll(".formulario_busqueda");
 
-const formulario_busqueda = document.getElementById("formulario_busqueda");
-let campo_busqueda = document.getElementById("campo_busqueda");
-let resultados_busqueda = document.getElementById("resultados_busqueda");
+formularios.forEach(formulario => {
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        // Buscamos el input que está DENTRO del formulario que se acaba de enviar
+        // 'this' hace referencia al formulario específico que disparó el evento
+        let campo = this.querySelector(".campo_busqueda");
+        let valor_busqueda = campo.value;
 
-formulario_busqueda.addEventListener("submit", function(event){
-    event.preventDefault();
-    
-    let valor_busqueda = campo_busqueda.value;
-
-    if (valor_busqueda.length > 2) {
-        fetch('./controlador/busqueda.php?termino=' + valor_busqueda)
-            .then(response => response.json())
-            .then(data => {
-                // Limpiando la búsqueda anterior, en caso de existir   
-                resultados_busqueda.innerHTML = "";
-                const listaArticulos = data.datos; 
-                
-                if (Array.isArray(listaArticulos)) {
-                    listaArticulos.forEach(articulo => {
-                        crearCard(
-                            articulo.id_articulos,
-                            articulo.imagen_articulos, 
-                            articulo.alt_articulos,
-                            articulo.nombre_articulos, 
-                            articulo.precio_articulos, 
-                            "resultados_busqueda"
-                        );
-                    });
-                
-                    document.getElementById("seccion_resultados").style.display = "flex";
-                
-                } 
-            })
-            .catch(error => {
-                campo_busqueda.value = ""
-                campo_busqueda.setAttribute("placeholder", "Intente con una palabra diferente")
-            });
-    }
-
+        if (valor_busqueda.length > 2) {
+            fetch('./controlador/busqueda.php?termino=' + encodeURIComponent(valor_busqueda))
+                .then(response => response.json())
+                .then(data => {
+                    let resultados_busqueda = document.getElementById("resultados_busqueda");
+                    resultados_busqueda.innerHTML = "";
+                    const listaArticulos = data.datos; 
+                    
+                    if (Array.isArray(listaArticulos)) {
+                        listaArticulos.forEach(articulo => {
+                            crearCard(
+                                articulo.id_articulos,
+                                articulo.imagen_articulos, 
+                                articulo.alt_articulos,
+                                articulo.nombre_articulos, 
+                                articulo.precio_articulos, 
+                                "resultados_busqueda"
+                            );
+                        });
+                        document.getElementById("seccion_resultados").style.display = "flex";
+                    } 
+                })
+                .catch(error => {
+                    console.error("Error en el fetch:", error);
+                    campo.value = "";
+                    campo.setAttribute("placeholder", "Intente con otra palabra");
+                });
+        }
+    });
 });

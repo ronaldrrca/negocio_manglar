@@ -206,7 +206,6 @@ h2 {
 #buscador_movil {
     display: flex;
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;    
 }
@@ -231,6 +230,7 @@ h2 {
     flex-wrap: wrap;
     gap: 2.5rem;
     background-color: #FFFFFF;
+    z-index: 100;
 }
 
 #menu li {
@@ -260,15 +260,11 @@ h2 {
 #icono_cerrar_menu {
     display: none;
     width: 3rem;
-    /* position: absolute;
-    top: 0;
-    right: 0; */
 }
 
 #seccion_resultados {
     display: none;
     flex-direction: column;
-
 }
 
 .articulos_destacados, .articulos_nuevos, .resultados_busqueda, #categoria, #contenedor_articulo {
