@@ -86,6 +86,8 @@ footer {
     gap: 3rem;
 }
 
+
+
 #domicilio_flotante {
     display: flex;
     justify-content: center;
@@ -112,16 +114,46 @@ h1 {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-    background-color: #FFFFFF;
+    background-color: #EBEBEB;
     font-size: 1.6rem;
     color: var(--black-font);
 }
 
 h2 {
-    margin-top: 5rem;
+    display: flex;
     text-align: center;
+    /* margin-top: 5rem; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
     font-size: 1.6rem;
     color: var(--black-font);
+}
+
+
+h2::before, h2::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    /* Aplicamos el color Crimson */
+    border-color: crimson; 
+    border-style: solid;
+    /* Un grosor fino para que no sea invasivo */
+    border-width: 0; 
+    transition: all 0.3s ease; /* Por si quieres animarlo luego */
+}
+
+h2::before {
+    border-top-width: 2px;
+    border-left-width: 2px;
+    margin-right: 15px;
+}
+
+h2::after {
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    margin-left: 15px;
 }
 
 #header_seccion {
@@ -136,7 +168,6 @@ h2 {
     width: 100%;
     justify-content: space-between;
 }
-
 #header_domicilio {
     display: none;
     justify-content: center;
@@ -270,12 +301,39 @@ h2 {
 .articulos_destacados, .articulos_nuevos, .resultados_busqueda, #categoria, #contenedor_articulo {
     display: flex;
     justify-content: space-around;
+    padding: 0rem 1rem 0 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+}
+
+.seccion_por_defecto {
+    display: flex;
+    justify-content: space-around;
     padding: 3rem 1rem 0 1rem;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+    width: 95%;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    
 }
+
+ #seccion_resultados {
+    display: none;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    justify-content: space-around;
+    padding: 3rem 1rem 0 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 95%;
+    border-radius: 5px;
+ }
 
 /* .articulos_destacados_titulo {
     margin-top: 5rem;
@@ -289,8 +347,9 @@ h2 {
     background-color: #FFFFFF;
     gap: 1rem;
     padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 5px 5px 2px #aaaaaa;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 3px 3px 2px #aaaaaa;
     transition: all 0.3s;
 }
 
