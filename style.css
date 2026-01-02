@@ -60,16 +60,20 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     max-width: 150rem;
     min-height: 100dvh;
     background-color: var(--secundary-color);
-    margin: 0 auto;
     padding-bottom: 2rem;
     position: relative;
 }
 
 footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +83,7 @@ footer {
 }
 
 #inicio_por_defecto {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,25 +91,6 @@ footer {
     gap: 3rem;
 }
 
-
-
-#domicilio_flotante {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    position: fixed;
-    bottom: 1rem;
-    right: 0;
-    padding: 0.3rem 1rem;
-    background-color: #333333;
-    color: #FFFFFF;
-}
-
-#domicilio_flotante img{
-    width: 4rem;
-    height: auto;
-}
 
 footer span {
     text-align: center;
@@ -175,6 +161,13 @@ h2::after {
     gap: 1rem;
     font-size: 1.4rem;
     color: #FFFFFF;
+}
+
+#icono_whasapp {
+    position: fixed;
+    bottom: 5px;
+    right: 2px;
+    width: 5rem;
 }
 
 .solo_domicilios {
@@ -293,45 +286,38 @@ h2::after {
     width: 3rem;
 }
 
-#seccion_resultados {
-    display: none;
-    flex-direction: column;
-}
-
-.articulos_destacados, .articulos_nuevos, .resultados_busqueda, #categoria, #contenedor_articulo {
-    display: flex;
-    justify-content: space-around;
-    padding: 0rem 1rem 0 1rem;
-    flex-wrap: wrap;
-    gap: 2rem;
-    /* margin-top: 2rem; */
-    margin-bottom: 2rem;
-}
-
 .seccion_por_defecto {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    padding: 3rem 1rem 0 1rem;
+    gap: 2rem;
+    background-color: #FFFFFF;
+}
+
+.seccion_productos_visibles,.resultados_busqueda {
     display: flex;
     justify-content: space-around;
-    padding: 3rem 1rem 0 1rem;
     flex-wrap: wrap;
-    gap: 2rem;
-    /* margin-top: 2rem; */
     margin-bottom: 2rem;
-    width: 95%;
-    border-radius: 5px;
-    background-color: #FFFFFF;
+    width: 100%;
+    gap: 2rem;
     
 }
 
  #seccion_resultados {
+    width: 95%;
     display: none;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
     background-color: #FFFFFF;
     justify-content: space-around;
     padding: 3rem 1rem 0 1rem;
-    flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 3rem;
-    width: 95%;
     border-radius: 5px;
  }
 
@@ -339,10 +325,9 @@ h2::after {
     margin-top: 5rem;
 } */
 
-.card_articulos {
+.card_articulos, .card_articulo_pagina_individual {
     display: flex;
-    flex-direction: column;
-    width: 19rem;
+    width: 18rem;
     height: auto;
     background-color: #FFFFFF;
     gap: 1rem;
@@ -353,18 +338,54 @@ h2::after {
     transition: all 0.3s;
 }
 
+#contenedor_articulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-bottom: 3rem; */
+}
+
+.card_articulos {
+    flex-direction: column;
+}
+
+.card_articulo_pagina_individual {
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_infoArticulo_individual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .card_articulos_img {
     width: 100%;
+}
+
+.card_articulo_pagina_individual_img {
+    width: 30rem;
 }
 
 .card_articulos_nombre {
     font-size: 1.2rem;
     color: var(--black-font);
+    font-weight: 600;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Número máximo de líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.card_articulos_descripcion {
+    font-size: 1.2rem;
+    color: var(--black-font);
 }
 
 .card_articulos_precio {
@@ -424,6 +445,18 @@ h2::after {
 
     #domicilio_flotante {
         display: none;
+    }
+
+    .card_articulo_pagina_individual {
+        flex-direction: row;
+        max-width: 70rem;
+    }
+
+    #icono_whasapp {
+        
+        bottom: 50%;
+        right: 2px;
+        width: 6rem;
     }
 
 
@@ -524,7 +557,7 @@ h2::after {
         border-bottom: 2px solid #FFFFFF;
     }
 
-    .card_articulos_nombre {
+    .card_articulos_nombre, .card_articulos_descripcion {
         font-size: 1.4rem;
     }
 

@@ -16,10 +16,20 @@ function formatearPrecio(precio) {
 }
 
 // Función para crear un elemento Card (Tarjeta de producto)
-function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, precio_articulo, contenedor_destino_articulo) {
+function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, descripcion_articulo, precio_articulo, contenedor_destino_articulo) {
+    //Contenedor artículos 
+    const contenedor_destino = document.getElementById(contenedor_destino_articulo);
     //Elemento imagen de card
     const card_articulos_imagen = document.createElement("img");
-    card_articulos_imagen.classList.add("card_articulos_img");
+    
+    if (contenedor_destino_articulo === "contenedor_articulo") {
+        card_articulos_imagen.classList.add("card_articulo_pagina_individual_img");
+
+    } else {
+        card_articulos_imagen.classList.add("card_articulos_img");
+
+    }
+
     card_articulos_imagen.setAttribute("src", "./imagenes/imagenes_productos/" + imagen_articulo);
     card_articulos_imagen.setAttribute("alt", alt_articulo);
 
@@ -28,6 +38,12 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
     card_articulos_nombre.classList.add("card_articulos_nombre");
     card_articulos_nombre.innerHTML = nombre_articulo;
 
+    //elemento descripción artículo card
+    const card_articulos_descripcion = document.createElement("p");
+    card_articulos_descripcion.classList.add("card_articulos_descripcion");
+    card_articulos_descripcion.innerHTML = descripcion_articulo;
+
+    
     //elemento precio card
     const precio = precio_articulo;
     const precioFormateado = formatearPrecio(precio);
@@ -36,15 +52,34 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
     card_articulos_precio.innerHTML = precioFormateado;
     
     //Elemento card (Contenedor principal)
-    const card_articulos = document.createElement("a");
-    card_articulos.setAttribute("id", id_articulo);
-    card_articulos.classList.add("card_articulos");
-    card_articulos.setAttribute("href", "../articulo.php?id=" + id_articulo);
-    card_articulos.appendChild(card_articulos_imagen);
-    card_articulos.appendChild(card_articulos_nombre);
-    card_articulos.appendChild(card_articulos_precio);
+    let card_articulos;
+    let contenedor_infoArticulo_articuloIndividual;
+    
+    if (contenedor_destino_articulo === "contenedor_articulo") {
+        card_articulos = document.createElement("div");
+        card_articulos.classList.add("card_articulo_pagina_individual");
+        contenedor_infoArticulo_articuloIndividual = document.createElement("div");
+        contenedor_infoArticulo_articuloIndividual.classList.add("contenedor_infoArticulo_individual");
+    } else {
+        card_articulos = document.createElement("a");
+        card_articulos.id = id_articulo;
+        card_articulos.setAttribute("href", "../articulo.php?id=" + id_articulo);
+        card_articulos.classList.add("card_articulos");
+    }
 
-    //Contenedor artículos
-    const contenedor_destino = document.getElementById(contenedor_destino_articulo);
-    contenedor_destino.appendChild(card_articulos);
+    card_articulos.appendChild(card_articulos_imagen);
+    
+    if (contenedor_infoArticulo_articuloIndividual) {
+        contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_nombre);
+        contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_descripcion);
+        contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_precio);
+        card_articulos.appendChild(contenedor_infoArticulo_articuloIndividual);
+        contenedor_destino.appendChild(card_articulos);
+    } else {
+        card_articulos.appendChild(card_articulos_nombre);
+        card_articulos.appendChild(card_articulos_precio);
+        contenedor_destino.appendChild(card_articulos);
+    }
+    
+    
 }

@@ -31,7 +31,8 @@ fetch('./controlador/ver_articulo.php?id=' + id_articulo)
                     articulo.id_articulo,
                     articulo.imagen_articulos, 
                     articulo.alt_articulos,
-                    articulo.nombre_articulos, 
+                    articulo.nombre_articulos,
+                    articulo.descripcion_articulos, 
                     articulo.precio_articulos, 
                     "contenedor_articulo"
                 );

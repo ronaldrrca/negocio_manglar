@@ -5,13 +5,15 @@ fetch('./controlador/ver_articulos_destacados.php')
     .then(data => {
         const listaArticulos = data.datos; 
         
-        if (Array.isArray(listaArticulos)) {
+        if (Array.isArray(listaArticulos)) { console.log(listaArticulos);
+        
             listaArticulos.forEach(articulo => {
                 crearCard(
                     articulo.id_articulos,
                     articulo.imagen_articulos, 
                     articulo.alt_articulos,
                     articulo.nombre_articulos, 
+                    articulo.descripcion_articulos,
                     articulo.precio_articulos, 
                     "articulos_destacados"
                 );
@@ -29,13 +31,15 @@ fetch('./controlador/ver_articulos_nuevos.php')
     .then(data => {
         const listaArticulos = data.datos; 
         
-        if (Array.isArray(listaArticulos)) {
+        if (Array.isArray(listaArticulos)) { console.log(listaArticulos);
+        
             listaArticulos.forEach(articulo => {
                 crearCard(
                     articulo.id_articulos,
                     articulo.imagen_articulos, 
                     articulo.alt_articulos,
                     articulo.nombre_articulos, 
+                    articulo.descripcion_articulos,
                     articulo.precio_articulos, 
                     "articulos_nuevos"
                 );

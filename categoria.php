@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./imagenes/imagenes_sitio/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +13,11 @@
         <?php require './banner.php'  ?>   
         <?php require './seccion_resultados.php'  ?> 
         
-        <div id="seccion_por_defecto">
+        <div class="seccion_por_defecto">
             <h2 id="titulo_categoria"></h2>
-            <section id="categoria" class="categoria"></section>
+            <section id="categoria" class="seccion_productos_visibles"></section>
         </div>
-        
+        <img id="icono_whasapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsaap">
     </main>
     <footer><?php require './footer.php';?></footer>
     <script src="./js/header.js"></script>

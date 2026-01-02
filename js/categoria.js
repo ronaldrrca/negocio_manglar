@@ -44,6 +44,7 @@ fetch(`./controlador/ver_articulos_por_categoria.php?categoria=${categoria}`)
                     articulo.imagen_articulos, 
                     articulo.alt_articulos,
                     articulo.nombre_articulos, 
+                    articulo.descripcion_articulos,
                     articulo.precio_articulos, 
                     "categoria"
                 );

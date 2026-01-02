@@ -16,19 +16,16 @@
         <div id="inicio_por_defecto">
             <div class="seccion_por_defecto">
                 <h2 class="articulos_destacados_titulo">Destacados</h2>
-                <section id="articulos_destacados" class="articulos_destacados"></section>
+                <section id="articulos_destacados" class="seccion_productos_visibles"></section>
             </div>
             <div class="seccion_por_defecto">
                 <h2 class="articulos_destacados_titulo">Nuevos</h2>
-                <section id="articulos_nuevos" class="articulos_nuevos"></section>
+                <section id="articulos_nuevos" class="seccion_productos_visibles"></section>
             </div>
         </div>
 
-        <div id="domicilio_flotante">
-            <img src="./imagenes/imagenes_sitio/carrito.png" alt="carrito de compras">
-            <span>Domicilio gratis <br> en Manglar</span>    
-        </div>
-    </main>
+        <img id="icono_whasapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsaap">
+    </main>        
     <footer><?php include './footer.php' ?></footer>
     <script src="./js/header.js"></script>
     <script src="./js/crear_card.js"></script>

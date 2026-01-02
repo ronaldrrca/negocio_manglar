@@ -25,6 +25,7 @@ formularios.forEach(formulario => {
                                 articulo.imagen_articulos, 
                                 articulo.alt_articulos,
                                 articulo.nombre_articulos, 
+                                articulo.descripcion_articulos,
                                 articulo.precio_articulos, 
                                 "resultados_busqueda"
                             );
