@@ -99,7 +99,7 @@ footer span {
 h1 {
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
     background-color: #EBEBEB;
     font-size: 1.6rem;
     color: var(--black-font);
@@ -163,11 +163,30 @@ h2::after {
     color: #FFFFFF;
 }
 
-#icono_whasapp {
+.link_whatsapp_paginaArticulo {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+.icono_whatsapp {
     position: fixed;
     bottom: 5px;
-    right: 2px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.icono_whatsapp img, #icono_whatsapp_link {
     width: 5rem;
+}
+
+.icono_whatsapp span {
+    font-size: 1.2rem;
+    color: #333333;
 }
 
 .solo_domicilios {
@@ -356,6 +375,7 @@ h2::after {
     max-width: 40rem;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .contenedor_infoArticulo_individual {
@@ -384,7 +404,7 @@ h2::after {
 }
 
 .card_articulos_descripcion {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--black-font);
 }
 
@@ -393,6 +413,15 @@ h2::after {
     font-weight: bold;
     color: #1277FA;
 }
+
+.mensaje_importante {
+    padding: 0 1rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: red;
+}
+
+
 
 
 /*---------- Media Queris ----------*/
@@ -452,11 +481,16 @@ h2::after {
         max-width: 70rem;
     }
 
-    #icono_whasapp {
-        
+    .icono_whatsapp {
+        cursor: pointer;
         bottom: 50%;
-        right: 2px;
+        right: 10px;
         width: 6rem;
+    }
+
+    .link_whatsapp_paginaArticulo {
+        top: unset;
+        bottom: 1rem;
     }
 
 

@@ -17,7 +17,10 @@
             <section id="resultados_busqueda" class="resultados_busqueda"></section>
         </div>
         <div id="contenedor_articulo"></div>
-        <img id="icono_whasapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsaap">
+        <!-- <a class="icono_whatsapp" href="https://wa.me/573003581311" target="_blank">
+            <img id="icono_whatsapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsapp">
+            <span>Pide aquí</span>
+        </a> -->
     </main>
     <footer><?php require './footer.php';?></footer>
     <script src="./js/header.js"></script>

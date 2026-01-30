@@ -50,6 +50,22 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
     const card_articulos_precio = document.createElement("span");
     card_articulos_precio.classList.add("card_articulos_precio");
     card_articulos_precio.innerHTML = precioFormateado;
+
+    //elemento mensaje
+    const mensaje_importante = document.createElement("span");
+    mensaje_importante.classList.add("mensaje_importante");
+    mensaje_importante.innerHTML = "* Solo venta a domicilio. <strong>Domicilio gratis en Manglar. </strong>Consulte para otros conjuntos";
+
+    //elemento icono whatsapp
+    const link_whatsapp_paginaArticulo = document.createElement("a");
+    link_whatsapp_paginaArticulo.classList.add("link_whatsapp_paginaArticulo");
+    link_whatsapp_paginaArticulo.setAttribute("href", "https://wa.me/573003581311");
+    link_whatsapp_paginaArticulo.setAttribute("target", "_blank");
+    const icono_whatsapp_paginaArticulo = document.createElement("img");
+    icono_whatsapp_paginaArticulo.setAttribute("id", "icono_whatsapp_link");
+    icono_whatsapp_paginaArticulo.setAttribute("src", "./imagenes/imagenes_sitio/icono_whatsapp.svg");
+    icono_whatsapp_paginaArticulo.setAttribute("alt", "icono whhatsapp");
+    link_whatsapp_paginaArticulo.appendChild(icono_whatsapp_paginaArticulo);
     
     //Elemento card (Contenedor principal)
     let card_articulos;
@@ -73,6 +89,8 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
         contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_nombre);
         contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_descripcion);
         contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_precio);
+        contenedor_infoArticulo_articuloIndividual.appendChild(mensaje_importante);
+        contenedor_infoArticulo_articuloIndividual.appendChild(link_whatsapp_paginaArticulo);
         card_articulos.appendChild(contenedor_infoArticulo_articuloIndividual);
         contenedor_destino.appendChild(card_articulos);
     } else {

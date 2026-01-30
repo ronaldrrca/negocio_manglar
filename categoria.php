@@ -17,7 +17,9 @@
             <h2 id="titulo_categoria"></h2>
             <section id="categoria" class="seccion_productos_visibles"></section>
         </div>
-        <img id="icono_whasapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsaap">
+        <a class="icono_whatsapp" href="https://wa.me/573003581311" target="_blank">
+            <img id="icono_whatsapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsapp">
+        </a>
     </main>
     <footer><?php require './footer.php';?></footer>
     <script src="./js/header.js"></script>
