@@ -40,6 +40,7 @@
                 <section id="articulos_nuevos" class="seccion_productos_visibles"></section>
             </div>
         </div>
+        <?php include './preguntaas_frecuentes.php'  ?>
 
         <a class="icono_whatsapp" href="https://wa.me/573003581311" target="_blank">
             <img id="icono_whatsapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsapp">

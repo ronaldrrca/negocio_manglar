@@ -17,6 +17,7 @@
             <section id="resultados_busqueda" class="resultados_busqueda"></section>
         </div>
         <div id="contenedor_articulo"></div>
+        <?php include './preguntaas_frecuentes.php'  ?>
     </main>
     <footer><?php require './footer.php';?></footer>
     <script src="./js/header.js"></script>
