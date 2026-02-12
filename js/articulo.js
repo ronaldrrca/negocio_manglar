@@ -28,12 +28,12 @@ fetch('./controlador/ver_articulo.php?id=' + id_articulo)
         if (Array.isArray(articulo)) {
             articulo.forEach(articulo => {
                 crearCard(
-                    articulo.id_articulo,
+                    articulo.id_articulos,
                     articulo.imagen_articulos, 
-                    articulo.alt_articulos,
                     articulo.nombre_articulos,
                     articulo.descripcion_articulos, 
-                    articulo.precio_articulos, 
+                    articulo.precio_articulos,
+                    articulo.codigo_barras_articulos, 
                     "contenedor_articulo"
                 );
             });

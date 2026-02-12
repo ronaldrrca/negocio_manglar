@@ -23,10 +23,10 @@ formularios.forEach(formulario => {
                             crearCard(
                                 articulo.id_articulos,
                                 articulo.imagen_articulos, 
-                                articulo.alt_articulos,
                                 articulo.nombre_articulos, 
                                 articulo.descripcion_articulos,
                                 articulo.precio_articulos, 
+                                articulo.codigo_barras_articulos,
                                 "resultados_busqueda"
                             );
                         });

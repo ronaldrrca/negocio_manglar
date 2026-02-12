@@ -1,9 +1,15 @@
+ARTICULOS
 id_articulos int(10)
+codigo_barras_articulos bigint(13) UNIQUE
 nombre_articulos text
 descripcion_articulos text
 precio_articulos int(10)
 imagen_articulos varchar(50)
-alt_articulos varchar(50)
 categoria_articulos varchar(50)
 disponobilidad_articulos boolean
 destacado_articulos boolean
+nuevo_articulos boolean
+proveedor_articulos varchar(50)
+alt_articulos varchar(50)
+
+

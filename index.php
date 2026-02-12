@@ -3,23 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La virtual en Manglar</title>
-    <link rel="shortcut icon" href="./imagenes/imagenes_sitio/favicon.ico" type="image/x-icon">
+    
+    <title>Mallorquín Market | Variedades, Belleza, Bienestar, Farmacia y Mascotas</title>
+    <meta name="description" content="Tu tienda virtual en Ciudad Mallorquín. Encuentra papelería, cosméticos, farmacia básica y cuidado para mascotas (shampoo, eliminador de olores) con domicilio inmediato.">
+    <link rel="canonical" href="https://www.mallorquinmarket.com">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mallorquinmarket.com">
+    <meta property="og:title" content="Mallorquín Market - Todo para tu hogar y tus mascotas">
+    <meta property="og:description" content="Lo que necesitas, a un clic en Ciudad Mallorquín. Belleza, bienestar, papelería y productos para mascotas a domicilio.">
+    <meta property="og:image" content="./imagenes/imagenes_sitio/banner_redes.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mallorquín Market | Tu Miscelánea a Domicilio">
+    <meta name="twitter:description" content="Variedades, belleza y bienestar para ti y tus mascotas en la puerta de tu casa.">
+    <meta name="twitter:image" content="./imagenes/imagenes_sitio/banner_redes.png">
+
+    <link rel="icon" href="./imagenes/imagenes_sitio/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header><?php require './header.php'; ?></header>
-    <main>
+     <main>
         <?php require './banner.php'  ?>
         <?php require './seccion_resultados.php'  ?> 
 
         <div id="inicio_por_defecto">
             <div class="seccion_por_defecto">
-                <h2 class="articulos_destacados_titulo">Destacados</h2>
+                <!-- <h2 class="articulos_destacados_titulo">Destacados</h2> -->
+                 <img class="titulo_seccion_producto" src="./imagenes/imagenes_sitio/h2_productos_destacados.png" alt="titulo productos destacados">
                 <section id="articulos_destacados" class="seccion_productos_visibles"></section>
             </div>
             <div class="seccion_por_defecto">
-                <h2 class="articulos_destacados_titulo">Nuevos</h2>
+                <img class="titulo_seccion_producto" src="./imagenes/imagenes_sitio/h2_productos_nuevos.png" alt="titulo productos nuevos">
                 <section id="articulos_nuevos" class="seccion_productos_visibles"></section>
             </div>
         </div>

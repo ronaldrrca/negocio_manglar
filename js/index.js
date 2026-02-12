@@ -11,10 +11,10 @@ fetch('./controlador/ver_articulos_destacados.php')
                 crearCard(
                     articulo.id_articulos,
                     articulo.imagen_articulos, 
-                    articulo.alt_articulos,
                     articulo.nombre_articulos, 
                     articulo.descripcion_articulos,
                     articulo.precio_articulos, 
+                    articulo.codigo_barras_articulos,
                     "articulos_destacados"
                 );
             });
@@ -37,10 +37,10 @@ fetch('./controlador/ver_articulos_nuevos.php')
                 crearCard(
                     articulo.id_articulos,
                     articulo.imagen_articulos, 
-                    articulo.alt_articulos,
                     articulo.nombre_articulos, 
                     articulo.descripcion_articulos,
                     articulo.precio_articulos, 
+                    articulo.codigo_barras_articulos,
                     "articulos_nuevos"
                 );
             });

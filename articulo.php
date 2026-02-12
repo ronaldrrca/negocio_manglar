@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mallorquín Market | Variedades, Belleza, Bienestar, Farmacia y Mascotas</title>
     <link rel="shortcut icon" href="./imagenes/imagenes_sitio/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header><?php require './header.php'; ?></header>
     <main>
-        <h1>Papelería - Miscelánea - y mucho más...</h1>        
+        <h1>Papelería - Miscelánea - Celebraciones - Belleza y cuidado personal - Farmacia - Mascotas</h1>        
 
         <div id="seccion_resultados">
             <h2 class="seccion_resultados_titulo">Tus resultados</h2>
             <section id="resultados_busqueda" class="resultados_busqueda"></section>
         </div>
         <div id="contenedor_articulo"></div>
-        <!-- <a class="icono_whatsapp" href="https://wa.me/573003581311" target="_blank">
-            <img id="icono_whatsapp" src="./imagenes/imagenes_sitio/icono_whatsapp.svg" alt="icono whatsapp">
-            <span>Pide aquí</span>
-        </a> -->
     </main>
     <footer><?php require './footer.php';?></footer>
     <script src="./js/header.js"></script>

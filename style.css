@@ -19,7 +19,8 @@ html {
 
 body {
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif; 
+    -webkit-font-smoothing: antialiased;
 }
 
 header {
@@ -42,8 +43,8 @@ header {
     width: 100%;
 }
 
-.logo_header_horizontal {
-    width: 24rem;
+.logo_header {
+    width: 18rem;
 }
 
 .banner {
@@ -99,22 +100,30 @@ footer span {
 h1 {
     width: 100%;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     background-color: #EBEBEB;
-    font-size: 1.6rem;
+    font-size: 1.6rem; 
+    font-weight: 600; 
     color: var(--black-font);
 }
+
+.titulo_seccion_producto {
+    width: 15rem;
+} 
 
 h2 {
     display: flex;
     text-align: center;
-    /* margin-top: 5rem; */
     justify-content: center;
     align-items: center;
     gap: 20px;
+    margin-bottom: 2rem;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--black-font);
+    text-transform: uppercase; /* Opcional: para que se vea más como sección */
+    letter-spacing: 1px;
 }
 
 
@@ -393,11 +402,12 @@ h2::after {
 }
 
 .card_articulos_nombre {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Subimos un poco el tamaño */
     color: var(--black-font);
-    font-weight: 600;
+    font-weight: 600; /* Para que resalte el nombre del producto */
+    line-height: 1.2;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Número máximo de líneas */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -409,16 +419,23 @@ h2::after {
 }
 
 .card_articulos_precio {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #1277FA;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1277FA; /* Color azul que tenías, o puedes probar con Crimson */
+    margin-top: 0.5rem;
+}
+
+.card_identificadores_articulo {
+    display: flex;
+    padding-top: 0.5rem;
+    border-top: 1px solid #CCCCCC;
 }
 
 .mensaje_importante {
     padding: 0 1rem;
     margin-top: 2rem;
     font-size: 1.2rem;
-    color: red;
+    
 }
 
 

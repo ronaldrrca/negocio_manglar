@@ -16,7 +16,7 @@ function formatearPrecio(precio) {
 }
 
 // Función para crear un elemento Card (Tarjeta de producto)
-function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, descripcion_articulo, precio_articulo, contenedor_destino_articulo) {
+function crearCard(id_articulo, imagen_articulo, nombre_articulo, descripcion_articulo, precio_articulo, codigo_barras_articulo, contenedor_destino_articulo) {
     //Contenedor artículos 
     const contenedor_destino = document.getElementById(contenedor_destino_articulo);
     //Elemento imagen de card
@@ -31,7 +31,7 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
     }
 
     card_articulos_imagen.setAttribute("src", "./imagenes/imagenes_productos/" + imagen_articulo);
-    card_articulos_imagen.setAttribute("alt", alt_articulo);
+    card_articulos_imagen.setAttribute("alt", nombre_articulo);
 
     //elemento nombre card
     const card_articulos_nombre = document.createElement("p");
@@ -51,10 +51,16 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
     card_articulos_precio.classList.add("card_articulos_precio");
     card_articulos_precio.innerHTML = precioFormateado;
 
+    //elemento identificadores
+    const card_identificadores_articulo = document.createElement("span");
+    card_identificadores_articulo.classList.add("card_identificadores_articulo");
+    card_identificadores_articulo.innerHTML = "Id: " + id_articulo + " / Cod:" + codigo_barras_articulo;
+
+
     //elemento mensaje
     const mensaje_importante = document.createElement("span");
     mensaje_importante.classList.add("mensaje_importante");
-    mensaje_importante.innerHTML = "* Solo venta a domicilio. <strong>Domicilio gratis en Manglar. </strong>Consulte para otros conjuntos";
+    mensaje_importante.innerHTML = "* Solo domicilios. <strong>Domicilio gratis en Manglar. </strong>Consulte para otros conjuntos";
 
     //elemento icono whatsapp
     const link_whatsapp_paginaArticulo = document.createElement("a");
@@ -89,6 +95,7 @@ function crearCard(id_articulo, imagen_articulo, alt_articulo, nombre_articulo, 
         contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_nombre);
         contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_descripcion);
         contenedor_infoArticulo_articuloIndividual.appendChild(card_articulos_precio);
+        contenedor_infoArticulo_articuloIndividual.appendChild(card_identificadores_articulo);
         contenedor_infoArticulo_articuloIndividual.appendChild(mensaje_importante);
         contenedor_infoArticulo_articuloIndividual.appendChild(link_whatsapp_paginaArticulo);
         card_articulos.appendChild(contenedor_infoArticulo_articuloIndividual);

@@ -9,3 +9,6 @@ SELECT * FROM `articulos` WHERE `destacado_articulos` = 1 and `disponobilidad_ar
 
 verArticulosNuevos
 SELECT * FROM `articulos` WHERE `nuevo_articulos`=1 and `disponobilidad_articulos`=1 LIMIT 6
+
+verArticulosPorCategoria
+SELECT * FROM articulos WHERE categoria_articulos = categoria

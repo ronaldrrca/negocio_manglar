@@ -1,4 +1,4 @@
 <div id="seccion_resultados">
-    <h2 class="seccion_resultados_titulo">Tus resultados</h2>
+    <img class="titulo_seccion_producto" src="./imagenes/imagenes_sitio/h2_tus_resultados.png" alt="titulo productos nuevos">
     <section id="resultados_busqueda" class="resultados_busqueda"></section>
 </div>

@@ -6,16 +6,13 @@ let categoria = urlParams.get('cat');
 
 //Dependiendo del valoor de la variable categoría asignamos el subtitulo correspondiente
 switch (categoria) {
-    case "papeleria-y-utiles-escolares":
+    case "papeleria":
         document.getElementById("titulo_categoria").innerHTML = "Papelería y útiles escolares";
-        break;
-    case "manualidades-y-arte":
-        document.getElementById("titulo_categoria").innerHTML = "Manualidades y arte";
         break;
     case "miscelaneos":
         document.getElementById("titulo_categoria").innerHTML = "Miscelaneos";
         break;
-    case "fiestas-y-celebraciones":
+    case "celebraciones":
         document.getElementById("titulo_categoria").innerHTML = "Fiestas y celebraciones";
         break;
     case "cuidado-personal":
@@ -23,6 +20,9 @@ switch (categoria) {
         break;
     case "farmacia":
         document.getElementById("titulo_categoria").innerHTML = "Farmacia";
+        break;
+    case "mascotas":
+        document.getElementById("titulo_categoria").innerHTML = "Mascotas";
         break;
     default:
         break;
@@ -42,17 +42,17 @@ fetch(`./controlador/ver_articulos_por_categoria.php?categoria=${categoria}`)
                 crearCard(
                     articulo.id_articulos,
                     articulo.imagen_articulos, 
-                    articulo.alt_articulos,
                     articulo.nombre_articulos, 
                     articulo.descripcion_articulos,
                     articulo.precio_articulos, 
+                    articulo.codigo_barras_articulos,
                     "categoria"
                 );
             });
         } 
     })
     .catch(error => {
-        console.error("", error);
+        location.href = "../index.php";
     });
 
 
