@@ -41,6 +41,6 @@ fetch('./controlador/ver_producto.php?id=' + id_producto)
         } 
     })
     .catch(error => {
-        console.error("Hubo un error en la solicitud fetch:", error);
+        location.href = "index.php";
     });
  
