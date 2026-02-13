@@ -16,13 +16,13 @@
             <h2 class="seccion_resultados_titulo">Tus resultados</h2>
             <section id="resultados_busqueda" class="resultados_busqueda"></section>
         </div>
-        <div id="contenedor_articulo"></div>
+        <div id="contenedor_producto"></div>
         <?php include './preguntaas_frecuentes.php'  ?>
     </main>
     <footer><?php require './footer.php';?></footer>
     <script src="./js/header.js"></script>
     <script src="./js/crear_card.js"></script>
-    <script src="./js/articulo.js"></script>
-    <script src="./js/busqueda_articulos.js"></script>
+    <script src="./js/producto.js"></script>
+    <script src="./js/busqueda_productos.js"></script>
 </body>
 </html>

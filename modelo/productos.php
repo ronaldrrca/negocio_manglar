@@ -1,7 +1,7 @@
 <?php
 require_once 'conexion.php';
 
-class Articulos {
+class Productos {
     private $id;
     private $nombre;
     private $descripcion;
@@ -14,10 +14,10 @@ class Articulos {
 
 
 
-    public function verArticulos() {
+    public function verProductos() {
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
-        $sql = "CALL verArticulos()";
+        $sql = "CALL verProductos()";
         $stmt = $conexion->prepare($sql);
     
         if ($stmt === false) {
@@ -54,10 +54,10 @@ class Articulos {
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 
-    public function verArticulosDestacados() {
+    public function verProductosDestacados() {
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
-        $sql = "CALL verArticulosDestacados()";
+        $sql = "CALL verProductosDestacados()";
         $stmt = $conexion->prepare($sql);
     
         if ($stmt === false) {
@@ -74,10 +74,10 @@ class Articulos {
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 
-    public function verArticulosNuevos() {
+    public function verProductosNuevos() {
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
-        $sql = "CALL verArticulosNuevos()";
+        $sql = "CALL verProductosNuevos()";
         $stmt = $conexion->prepare($sql);
     
         if ($stmt === false) {
@@ -94,13 +94,13 @@ class Articulos {
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 
-    public function verArticulosPorCategoria($categoria) {
+    public function verProductosPorCategoria($categoria) {
         $this->categoria = $categoria;
 
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
 
-        $sql = "CALL verArticulosPorCategoria(?)";
+        $sql = "CALL verProductosPorCategoria(?)";
         $stmt = $conexion->prepare($sql);
         $stmt->bind_param("s", $this->categoria);
 
@@ -113,13 +113,13 @@ class Articulos {
         return $resultado;  // Devuelve true si se ejecutó correctamente, false en caso de error
     }
 
-    public function verArticulo($id) {
+    public function verProducto($id) {
         $this->id = $id;
 
         $objConexion = new Conexion();
         $conexion = $objConexion->conectarse();
 
-        $sql = "CALL verArticulo(?)";
+        $sql = "CALL verProducto(?)";
         $stmt = $conexion->prepare($sql);
         $stmt->bind_param("i", $this->id);
 

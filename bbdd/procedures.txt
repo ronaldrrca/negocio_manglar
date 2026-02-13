@@ -1,14 +1,14 @@
 buscar
-SELECT * FROM articulos WHERE nombre_articulos LIKE CONCAT('%', p_termino_busqueda, '%') and `disponobilidad_articulos` = 1 ORDER BY nombre_articulos
+SELECT * FROM producto WHERE nombre_producto LIKE CONCAT('%', p_termino_busqueda, '%') and `disponobilidad_producto` = 1 ORDER BY nombre_producto
 
-verArticulos
-SELECT * FROM `articulos` WHERE `disponobilidad_articulos` = 1 ORDER BY nombre_articulos
+verProducto
+SELECT * FROM `producto` WHERE `id_prodcuto` = id AND `disponobilidad_producto` = 1
 
-verArticulosDestacados
-SELECT * FROM `articulos` WHERE `destacado_articulos` = 1 and `disponobilidad_articulos` = 1 ORDER BY nombre_articulos
+verProductoDestacados
+SELECT * FROM `producto` WHERE `destacado_producto` = 1 and `disponobilidad_producto` = 1 ORDER BY nombre_producto
 
-verArticulosNuevos
-SELECT * FROM `articulos` WHERE `nuevo_articulos`=1 and `disponobilidad_articulos`=1 LIMIT 6
+verProductosNuevos
+SELECT * FROM `producto` WHERE `nuevo_producto`=1 and `disponobilidad_producto`=1 LIMIT 6
 
-verArticulosPorCategoria
-SELECT * FROM articulos WHERE categoria_articulos = categoria
+verProductoPorCategoria
+SELECT * FROM producto WHERE categoria_producto = categoria

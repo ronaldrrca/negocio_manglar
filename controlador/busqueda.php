@@ -1,10 +1,10 @@
 <?php
-require_once '../modelo/articulos.php';
+require_once '../modelo/productos.php';
 header('Content-Type: application/json');
 
 $termino = $_GET['termino'];
-$objArticulos = new Articulos();
-$resultado = $objArticulos->busqueda($termino);
+$objProductos = new Productos();
+$resultado = $objProductos->busqueda($termino);
 
 while ($fila = $resultado->fetch_assoc()) {
         $datos[] = $fila;

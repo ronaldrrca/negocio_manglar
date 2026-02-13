@@ -1,15 +1,15 @@
-ARTICULOS
-id_articulos int(10)
-codigo_barras_articulos bigint(13) UNIQUE
-nombre_articulos text
-descripcion_articulos text
-precio_articulos int(10)
-imagen_articulos varchar(50)
-categoria_articulos varchar(50)
-disponobilidad_articulos boolean
-destacado_articulos boolean
-nuevo_articulos boolean
-proveedor_articulos varchar(50)
-alt_articulos varchar(50)
+PRODUCTO
+id_producto int(10)
+codigo_barras_producto bigint(13) UNIQUE
+nombre_producto text
+descripcion_producto text
+precio_producto int(10)
+imagen_producto varchar(10)
+categoria_producto varchar(50)
+disponobilidad_producto boolean
+destacado_producto boolean
+nuevo_producto boolean
+proveedor_producto varchar(50)
+
 
 

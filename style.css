@@ -32,7 +32,7 @@ header {
     width: 100%;
     height: auto;
     padding: 1rem 2rem;
-    background-color: var(--primary-color);
+    background-color: #FFFFFF;
 }
 
 #nav {
@@ -169,13 +169,20 @@ h2::after {
     align-items: center;
     gap: 1rem;
     font-size: 1.4rem;
-    color: #FFFFFF;
+    color: #333333;
 }
 
-.link_whatsapp_paginaArticulo {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
+.link_whatsapp_pagina_producto {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #2095AC;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    border-radius: 5px;
+    color: #FFFFFF;
 }
 
 .icono_whatsapp {
@@ -227,7 +234,7 @@ h2::after {
     display: flex;
     justify-content: center;
     align-items: center;    
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     width: 80%;
     margin-top: 2rem;
 }
@@ -245,7 +252,7 @@ h2::after {
     background-color: var(--secundary-color);
     color: var(--black-font);
     border: 2px #333333;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 #boton_buscar {
@@ -281,7 +288,7 @@ h2::after {
     padding: 1rem;
     flex-wrap: wrap;
     gap: 2.5rem;
-    background-color: #FFFFFF;
+    background-color: #2095ac;
     z-index: 100;
 }
 
@@ -297,7 +304,7 @@ h2::after {
     width: 100%;
     padding: 1rem;
     font-size: 1.6rem;
-    color: var(--black-font);
+    color: #FFFFFF;
     justify-content: center;
 }
 
@@ -349,16 +356,12 @@ h2::after {
     border-radius: 5px;
  }
 
-/* .articulos_destacados_titulo {
-    margin-top: 5rem;
-} */
 
-.card_articulos, .card_articulo_pagina_individual {
+.card_productos, .card_producto_pagina_individual {
     display: flex;
     width: 18rem;
     height: auto;
     background-color: #FFFFFF;
-    gap: 1rem;
     padding: 1rem;
     border-radius: 10px;
     border: 1px solid #CCCCCC;
@@ -366,7 +369,11 @@ h2::after {
     transition: all 0.3s;
 }
 
-#contenedor_articulo {
+.card_producto_pagina_individual {
+    gap: 1rem;
+}
+
+#contenedor_producto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,11 +381,18 @@ h2::after {
     /* margin-bottom: 3rem; */
 }
 
-.card_articulos {
+.card_productos {
     flex-direction: column;
 }
 
-.card_articulo_pagina_individual {
+.card_productos_marca {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.card_producto_pagina_individual {
     flex-direction: column;
     width: 100%;
     max-width: 40rem;
@@ -387,24 +401,29 @@ h2::after {
     position: relative;
 }
 
-.contenedor_infoArticulo_individual {
+.contenedor_infoproducto_individual {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.card_articulos_img {
+.contenedor_infoproducto_individual .card_productos_nombre {
+    font-weight: bold;
+    color: #2095AC;
+    font-size: 1.5rem;
+}
+
+.card_productos_img {
     width: 100%;
 }
 
-.card_articulo_pagina_individual_img {
+.card_producto_pagina_individual_img {
     width: 30rem;
 }
 
-.card_articulos_nombre {
+.card_productos_nombre {
     font-size: 1.4rem; /* Subimos un poco el tamaño */
     color: var(--black-font);
-    font-weight: 600; /* Para que resalte el nombre del producto */
     line-height: 1.2;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -413,19 +432,19 @@ h2::after {
     text-overflow: ellipsis;
 }
 
-.card_articulos_descripcion {
+.card_productos_descripcion {
     font-size: 1.4rem;
     color: var(--black-font);
 }
 
-.card_articulos_precio {
-    font-size: 1.6rem;
+.card_productos_precio {
+    font-size: 2rem;
     font-weight: 600;
-    color: #1277FA; /* Color azul que tenías, o puedes probar con Crimson */
-    margin-top: 0.5rem;
+    color: #333333; /* Color azul que tenías, o puedes probar con Crimson */
+    margin-top: 1rem;
 }
 
-.card_identificadores_articulo {
+.card_identificadores_producto {
     display: flex;
     padding-top: 0.5rem;
     border-top: 1px solid #CCCCCC;
@@ -464,6 +483,15 @@ h3 {
 .preguntas_frecuentes p {
     font-size: 1.4rem;
     color: #0000008C;
+}
+
+span, div {
+    cursor: default;
+    user-select: none;
+}
+
+img {
+    user-select: none;
 }
 
 
@@ -520,7 +548,7 @@ h3 {
         display: none;
     }
 
-    .card_articulo_pagina_individual {
+    .card_producto_pagina_individual {
         flex-direction: row;
         max-width: 70rem;
     }
@@ -532,7 +560,7 @@ h3 {
         width: 6rem;
     }
 
-    .link_whatsapp_paginaArticulo {
+    .link_whatsapp_paginaProducto {
         top: unset;
         bottom: 1rem;
     }
@@ -618,7 +646,7 @@ h3 {
         right: unset;
         display: flex;
         flex-direction: row;
-        background-color: var(--primary-color);
+        background-color: #FFFFFF;
     }
 
     #menu li {
@@ -629,21 +657,26 @@ h3 {
         display: flex;
         width: auto;
         font-size: 1.4rem;
+        font-weight: bold;
         padding: 0 0 3px 0;
         border-bottom: 2px solid transparent;
         transition: all 0.3s;
-        color: #FFFFFF;
+        color: #333333;
     }
 
     #menu li a:hover {
-        border-bottom: 2px solid #FFFFFF;
+        border-bottom: 2px solid #333333;
     }
 
-    .card_articulos_nombre, .card_articulos_descripcion {
+    .card_productos:hover {
+        box-shadow: 3px 3px 2px #2095AC;
+    }
+
+    .card_productos_nombre, .card_productos_descripcion {
         font-size: 1.4rem;
     }
 
-    .card_articulos_precio {
+    .card_productos_precio {
         font-size: 1.6rem;
     }
 

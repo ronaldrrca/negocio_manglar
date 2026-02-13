@@ -1,20 +1,21 @@
 <?php
-require_once '../modelo/articulos.php';
+require_once '../modelo/productos.php';
 header('Content-Type: application/json');
 
-$objArticulos = new Articulos();
-$resultado = $objArticulos->verArticulosNuevos();
+$categoria = $_GET['categoria'];
+$objProductos = new Productos();
+$resultado = $objProductos->verProductosPorCategoria($categoria);
+
 
 while ($fila = $resultado->fetch_assoc()) {
         $data[] = $fila;
     }
 
 $respuesta = [
-    "mensaje" => "Productos obtenidos correctamente.",
-    "status" => "success",
     "datos" => $data
 ];
     
 echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);  // Convertir array PHP a JSON
+
 
 ?>

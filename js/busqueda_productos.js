@@ -16,17 +16,18 @@ formularios.forEach(formulario => {
                 .then(data => {
                     let resultados_busqueda = document.getElementById("resultados_busqueda");
                     resultados_busqueda.innerHTML = "";
-                    const listaArticulos = data.datos; 
+                    const listaproductos = data.datos; 
                     
-                    if (Array.isArray(listaArticulos)) {
-                        listaArticulos.forEach(articulo => {
+                    if (Array.isArray(listaproductos)) {
+                        listaproductos.forEach(producto => {
                             crearCard(
-                                articulo.id_articulos,
-                                articulo.imagen_articulos, 
-                                articulo.nombre_articulos, 
-                                articulo.descripcion_articulos,
-                                articulo.precio_articulos, 
-                                articulo.codigo_barras_articulos,
+                                producto.id_producto,
+                                producto.imagen_producto, 
+                                producto.nombre_producto, 
+                                producto.descripcion_producto,
+                                producto.precio_producto, 
+                                producto.codigo_barras_producto,
+                                producto.marca_producto,
                                 "resultados_busqueda"
                             );
                         });

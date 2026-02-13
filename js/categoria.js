@@ -32,20 +32,21 @@ switch (categoria) {
 
 // --- Lógica de Carga artículos por categoría ---
 
-fetch(`./controlador/ver_articulos_por_categoria.php?categoria=${categoria}`)
+fetch(`./controlador/ver_productos_por_categoria.php?categoria=${categoria}`)
     .then(response => response.json())
     .then(data => {
-        const listaArticulos = data.datos; 
+        const listaproductos = data.datos; 
         
-        if (Array.isArray(listaArticulos)) {
-            listaArticulos.forEach(articulo => {
+        if (Array.isArray(listaproductos)) {
+            listaproductos.forEach(producto => {
                 crearCard(
-                    articulo.id_articulos,
-                    articulo.imagen_articulos, 
-                    articulo.nombre_articulos, 
-                    articulo.descripcion_articulos,
-                    articulo.precio_articulos, 
-                    articulo.codigo_barras_articulos,
+                    producto.id_producto,
+                    producto.imagen_producto, 
+                    producto.nombre_producto, 
+                    producto.descripcion_producto,
+                    producto.precio_producto, 
+                    producto.codigo_barras_producto,
+                    producto.marca_producto,
                     "categoria"
                 );
             });

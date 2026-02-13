@@ -1,9 +1,9 @@
 <?php
-require_once '../modelo/articulos.php';
+require_once '../modelo/productos.php';
 header('Content-Type: application/json');
 
-$objArticulos = new Articulos();
-$resultado = $objArticulos->verArticulosDestacados();
+$objProductos = new Productos();
+$resultado = $objProductos->verProductosNuevos();
 
 while ($fila = $resultado->fetch_assoc()) {
         $data[] = $fila;

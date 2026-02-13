@@ -1,10 +1,10 @@
 <?php
-require_once '../modelo/articulos.php';
+require_once '../modelo/productos.php';
 header('Content-Type: application/json');
 
-$categoria = $_GET['categoria'];
-$objArticulos = new Articulos();
-$resultado = $objArticulos->verArticulosPorCategoria($categoria);
+$id = $_GET['id'];
+$objProductos = new Productos();
+$resultado = $objProductos->verProducto($id);
 
 
 while ($fila = $resultado->fetch_assoc()) {

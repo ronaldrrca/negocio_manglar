@@ -33,11 +33,11 @@
             <div class="seccion_por_defecto">
                 <!-- <h2 class="articulos_destacados_titulo">Destacados</h2> -->
                  <img class="titulo_seccion_producto" src="./imagenes/imagenes_sitio/h2_productos_destacados.png" alt="titulo productos destacados">
-                <section id="articulos_destacados" class="seccion_productos_visibles"></section>
+                <section id="productos_destacados" class="seccion_productos_visibles"></section>
             </div>
             <div class="seccion_por_defecto">
                 <img class="titulo_seccion_producto" src="./imagenes/imagenes_sitio/h2_productos_nuevos.png" alt="titulo productos nuevos">
-                <section id="articulos_nuevos" class="seccion_productos_visibles"></section>
+                <section id="productos_nuevos" class="seccion_productos_visibles"></section>
             </div>
         </div>
         <?php include './preguntaas_frecuentes.php'  ?>
@@ -50,6 +50,6 @@
     <script src="./js/header.js"></script>
     <script src="./js/crear_card.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/busqueda_articulos.js"></script>
+    <script src="./js/busqueda_productos.js"></script>
 </body>
 </html>

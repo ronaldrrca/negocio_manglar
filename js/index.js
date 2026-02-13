@@ -1,21 +1,22 @@
 // --- Lógica de Carga Inicial de Artículos Destacados ---
 
-fetch('./controlador/ver_articulos_destacados.php')
+fetch('./controlador/ver_productos_destacados.php')
     .then(response => response.json())
     .then(data => {
-        const listaArticulos = data.datos; 
+        const listaproductos = data.datos; 
         
-        if (Array.isArray(listaArticulos)) { console.log(listaArticulos);
+        if (Array.isArray(listaproductos)) { 
         
-            listaArticulos.forEach(articulo => {
+            listaproductos.forEach(producto => {
                 crearCard(
-                    articulo.id_articulos,
-                    articulo.imagen_articulos, 
-                    articulo.nombre_articulos, 
-                    articulo.descripcion_articulos,
-                    articulo.precio_articulos, 
-                    articulo.codigo_barras_articulos,
-                    "articulos_destacados"
+                    producto.id_producto,
+                    producto.imagen_producto, 
+                    producto.nombre_producto, 
+                    producto.descripcion_producto,
+                    producto.precio_producto, 
+                    producto.codigo_barras_producto,
+                    producto.marca_producto,
+                    "productos_destacados"
                 );
             });
         } 
@@ -26,22 +27,23 @@ fetch('./controlador/ver_articulos_destacados.php')
 
 
 
-fetch('./controlador/ver_articulos_nuevos.php')
+fetch('./controlador/ver_productos_nuevos.php')
     .then(response => response.json())
     .then(data => {
-        const listaArticulos = data.datos; 
+        const listaproductos = data.datos; 
         
-        if (Array.isArray(listaArticulos)) { console.log(listaArticulos);
+        if (Array.isArray(listaproductos)) { 
         
-            listaArticulos.forEach(articulo => {
+            listaproductos.forEach(producto => {
                 crearCard(
-                    articulo.id_articulos,
-                    articulo.imagen_articulos, 
-                    articulo.nombre_articulos, 
-                    articulo.descripcion_articulos,
-                    articulo.precio_articulos, 
-                    articulo.codigo_barras_articulos,
-                    "articulos_nuevos"
+                    producto.id_producto,
+                    producto.imagen_producto, 
+                    producto.nombre_producto, 
+                    producto.descripcion_producto,
+                    producto.precio_producto, 
+                    producto.codigo_barras_producto,
+                    producto.marca_producto,
+                    "productos_nuevos"
                 );
             });
         } 

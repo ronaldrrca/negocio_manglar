@@ -26,6 +26,6 @@
     <script src="./js/header.js"></script>
     <script src="./js/crear_card.js"></script>
     <script src="./js/categoria.js"></script>
-    <script src="./js/busqueda_articulos.js"></script>
+    <script src="./js/busqueda_productos.js"></script>
 </body>
 </html>
