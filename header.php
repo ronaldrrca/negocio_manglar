@@ -1,3 +1,8 @@
+<?php
+if (!defined('LLAVE_MALLORQUIN')) {
+    die("Acceso denegado."); // O un redireccionamiento
+}
+?>
 <div id="header_seccion">
         <div id="header_inline">
             <a href="./index.php"><img class="logo_header" src="./imagenes/imagenes_sitio/logo.png" alt="logo mallorquin market"></a>

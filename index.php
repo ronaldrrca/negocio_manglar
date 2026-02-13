@@ -1,3 +1,8 @@
+<?php  
+    define('LLAVE_MALLORQUIN', true);
+    $url_completa = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,10 +11,10 @@
     
     <title>Mallorquín Market | Variedades, Belleza, Bienestar, Farmacia y Mascotas</title>
     <meta name="description" content="Tu tienda virtual en Ciudad Mallorquín. Encuentra papelería, cosméticos, farmacia básica y cuidado para mascotas (shampoo, eliminador de olores) con domicilio inmediato.">
-    <link rel="canonical" href="https://www.mallorquinmarket.com">
+    <link rel="canonical" href="<?php echo $url_completa; ?>">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.mallorquinmarket.com">
+    <meta property="og:url" content="<?php echo $url_completa; ?>">
     <meta property="og:title" content="Mallorquín Market - Todo para tu hogar y tus mascotas">
     <meta property="og:description" content="Lo que necesitas, a un clic en Ciudad Mallorquín. Belleza, bienestar, papelería y productos para mascotas a domicilio.">
     <meta property="og:image" content="./imagenes/imagenes_sitio/banner_redes.png">

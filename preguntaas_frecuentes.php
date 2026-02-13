@@ -1,3 +1,8 @@
+<?php
+if (!defined('LLAVE_MALLORQUIN')) {
+    die("Acceso denegado."); // O un redireccionamiento
+}
+?>
 <section id="preguntas_frecuentes">
     <h3>Preguntas frecuentes</h3>
     <div class="preguntas_frecuentes">
