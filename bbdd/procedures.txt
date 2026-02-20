@@ -5,10 +5,10 @@ verProducto
 SELECT * FROM `producto` WHERE `id_prodcuto` = id AND `disponobilidad_producto` = 1
 
 verProductoDestacados
-SELECT * FROM `producto` WHERE `destacado_producto` = 1 and `disponobilidad_producto` = 1 ORDER BY nombre_producto
+SELECT * FROM `producto` WHERE `destacado_producto` = 1 and `disponobilidad_producto` = 1 ORDER BY nombre_producto LIMIT 6
 
 verProductosNuevos
 SELECT * FROM `producto` WHERE `nuevo_producto`=1 and `disponobilidad_producto`=1 LIMIT 6
 
-verProductoPorCategoria
+verProductosPorCategoria
 SELECT * FROM producto WHERE categoria_producto = categoria

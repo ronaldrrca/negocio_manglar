@@ -16,6 +16,7 @@ fetch('./controlador/ver_productos_destacados.php')
                     producto.precio_producto, 
                     producto.codigo_barras_producto,
                     producto.marca_producto,
+                    producto.categoria_producto,
                     "productos_destacados"
                 );
             });
@@ -43,6 +44,7 @@ fetch('./controlador/ver_productos_nuevos.php')
                     producto.precio_producto, 
                     producto.codigo_barras_producto,
                     producto.marca_producto,
+                    producto.categoria_producto,
                     "productos_nuevos"
                 );
             });

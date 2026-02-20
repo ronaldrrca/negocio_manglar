@@ -35,12 +35,13 @@ fetch('./controlador/ver_producto.php?id=' + id_producto)
                     producto.precio_producto,
                     producto.codigo_barras_producto, 
                     producto.marca_producto,
+                    producto.categoria_producto,
                     "contenedor_producto"
                 );
             });
         } 
     })
     .catch(error => {
-        location.href = "index.php";
+        // location.href = "index.php";
     });
  

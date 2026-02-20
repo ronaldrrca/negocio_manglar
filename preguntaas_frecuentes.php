@@ -1,8 +1,4 @@
-<?php
-if (!defined('LLAVE_MALLORQUIN')) {
-    header("Location: index.php");//Redirección por ingreso directo al archivo por navegador
-}
-?>
+
 <section id="preguntas_frecuentes">
     <h3>Preguntas frecuentes</h3>
     <div class="preguntas_frecuentes">

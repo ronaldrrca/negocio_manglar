@@ -437,6 +437,12 @@ h2::after {
     color: var(--black-font);
 }
 
+.card_productos_advertencia_legal {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .card_productos_precio {
     font-size: 2rem;
     font-weight: 600;

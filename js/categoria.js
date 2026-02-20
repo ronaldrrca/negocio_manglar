@@ -47,6 +47,7 @@ fetch(`./controlador/ver_productos_por_categoria.php?categoria=${categoria}`)
                     producto.precio_producto, 
                     producto.codigo_barras_producto,
                     producto.marca_producto,
+                    producto.categoria_producto,
                     "categoria"
                 );
             });

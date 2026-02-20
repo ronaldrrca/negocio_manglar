@@ -1,8 +1,5 @@
-<?php
-if (!defined('LLAVE_MALLORQUIN')) {
-    header("Location: index.php");//Redirección por ingreso directo al archivo por navegador
-}
-?>
+
+
 <div class="contenedor_buscador">
     <form class="formulario_busqueda buscador" action="#">
         <input class="campo_busqueda" type="search" name="q" placeholder="Buscar...">

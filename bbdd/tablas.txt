@@ -6,7 +6,7 @@ descripcion_producto text
 precio_producto int(10)
 imagen_producto varchar(10)
 categoria_producto varchar(50)
-disponobilidad_producto boolean
+disponibilidad_producto boolean
 destacado_producto boolean
 nuevo_producto boolean
 proveedor_producto varchar(50)

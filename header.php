@@ -1,8 +1,3 @@
-<?php
-if (!defined('LLAVE_MALLORQUIN')) {
-    header("Location: index.php");//Redirección por ingreso directo al archivo por navegador
-}
-?>
 <div id="header_seccion">
         <div id="header_inline">
             <a href="./index.php"><img class="logo_header" src="./imagenes/imagenes_sitio/logo.png" alt="logo mallorquin market"></a>

@@ -16,7 +16,7 @@ function formatearPrecio(precio) {
 }
 
 // Función para crear un elemento Card (Tarjeta de producto)
-function crearCard(id_producto, imagen_producto, nombre_producto, descripcion_producto, precio_producto, codigo_barras_producto, marca_producto, contenedor_destino_producto) {
+function crearCard(id_producto, imagen_producto, nombre_producto, descripcion_producto, precio_producto, codigo_barras_producto, marca_producto, categoria_producto, contenedor_destino_producto) {
     //Contenedor artículos 
     const contenedor_destino = document.getElementById(contenedor_destino_producto);
     //Elemento imagen de card
@@ -46,8 +46,12 @@ function crearCard(id_producto, imagen_producto, nombre_producto, descripcion_pr
     //elemento descripción artículo card
     const card_productos_descripcion = document.createElement("p");
     card_productos_descripcion.classList.add("card_productos_descripcion");
-    card_productos_descripcion.innerHTML = descripcion_producto;
+    
+    // Agregamos un <span> con la clase directamente en el string
+const card_productos_advertencia_legal = `<br><br><span class="card_productos_advertencia_legal">Es un medicamento. No exceder su consumo. Si los síntomas persisten, consulte a su médico. Leer indicaciones y contraindicaciones en la etiqueta.</span>`;
 
+
+    card_productos_descripcion.innerHTML = descripcion_producto + (categoria_producto === "farmacia" ? card_productos_advertencia_legal : "");
     
     //elemento precio card
     const precio = precio_producto;
@@ -65,7 +69,7 @@ function crearCard(id_producto, imagen_producto, nombre_producto, descripcion_pr
     //elemento mensaje
     const mensaje_importante = document.createElement("span");
     mensaje_importante.classList.add("mensaje_importante");
-    mensaje_importante.innerHTML = "* Venta solo a domicilio. <strong>Domicilio gratis por lanzamiento hasta nuevo aviso. </strong>";
+    mensaje_importante.innerHTML = "* Venta solo a domicilio en Ciudad Mallorquín. <strong>Domicilio gratis por lanzamiento hasta nuevo aviso. </strong>";
 
     //elemento icono whatsapp
     const link_whatsapp_pagina_producto = document.createElement("a");

@@ -1,7 +1,3 @@
-<?php  
-    define('LLAVE_MALLORQUIN', true);//Permite controlar el acceso directo por navegador a los archivos html incluidos (protegidos).
-    $url_completa = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";//Define la url a utilizar en los meta
-?>
 
 <!DOCTYPE html>
 <html lang="es">
