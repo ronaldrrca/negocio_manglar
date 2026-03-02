@@ -415,10 +415,14 @@ h2::after {
 
 .card_productos_img {
     width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .card_producto_pagina_individual_img {
     width: 30rem;
+    height: auto;
+    object-fit: contain;
 }
 
 .card_productos_nombre {

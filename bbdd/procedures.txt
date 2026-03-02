@@ -2,13 +2,23 @@ buscar
 SELECT * FROM producto WHERE nombre_producto LIKE CONCAT('%', p_termino_busqueda, '%') and `disponobilidad_producto` = 1 ORDER BY nombre_producto
 
 verProducto
-SELECT * FROM `producto` WHERE `id_prodcuto` = id AND `disponobilidad_producto` = 1
+SELECT * FROM `producto` WHERE `id_prodcuto` = id AND `disponibilidad_producto` = 1
 
 verProductoDestacados
-SELECT * FROM `producto` WHERE `destacado_producto` = 1 and `disponobilidad_producto` = 1 ORDER BY nombre_producto LIMIT 6
+SELECT * FROM `producto` WHERE `destacado_producto` = 1 and `disponibilidad_producto` = 1 ORDER BY nombre_producto LIMIT 6
 
 verProductosNuevos
 SELECT * FROM `producto` WHERE `nuevo_producto`=1 and `disponobilidad_producto`=1 LIMIT 6
 
 verProductosPorCategoria
 SELECT * FROM producto WHERE categoria_producto = categoria
+
+crearProducto
+INSERT INTO `producto` (`codigo_barras_producto`, `marca_producto`, `nombre_producto`, `descripcion_producto`, `precio_producto`, `imagen_producto`, 
+`categoria_producto`, `disponibilidad_producto`, `destacado_producto`, `nuevo_producto`, `proveedor_producto`) VALUES (codigo_barras, marca_producto, 
+nombre_producto, descripcion_producto, precio_producto, imagen_producto, categoria_producto, disponibilidad_producto, destacado_producto, nuevo_producto, 
+proveedor_producto);
+
+
+
+

@@ -1,6 +1,7 @@
 PRODUCTO
 id_producto int(10)
 codigo_barras_producto bigint(13) UNIQUE
+marca_producto
 nombre_producto text
 descripcion_producto text
 precio_producto int(10)
@@ -10,6 +11,68 @@ disponibilidad_producto boolean
 destacado_producto boolean
 nuevo_producto boolean
 proveedor_producto varchar(50)
+
+
+
+Enum Marcas
+Anyeluz
+Bayer
+Carefree
+Ego
+Essence
+Eterna
+Genérico
+Genomma Lab
+Gillette
+Haleon
+Huggies
+Johnson's
+Kadio
+Kotex
+Listerine
+Lubriderm
+Marfil
+Masglo
+Mexsana
+Milagros
+Mon Ami
+Nivea
+Nosotras
+Nude
+Nutribela
+P&G
+Pequeñín
+Rexona
+Ruby Rose
+Rumatex
+Scribe
+Sedal
+Speed Stick
+Sundown
+Tío nacho
+Trendy Boom
+Vogue
+
+ALTER TABLE `producto` 
+MODIFY COLUMN `marca_producto` ENUM('--', 'Advil', 'Anyeluz', 'Bayer', 'Carefree', 'Dolex', 'Ego', 'Essence', 'Eterna', 'Genérico', 'Gillette', 'Haleon', 'Huggies', 
+'Johnsons', 'Kadio', 'Kotex', 'Listerine', 'Lubriderm', 'Marfil', 'Masglo', 'Medicasp', 'Mexsana', 'Milagros', 'Mon Ami', 'Nivea', 'Nosotras', 'Nude', 'Nutribela',
+'P&G', 'Pequeñín', 'Rexona', 'Ruby Rose', 'Rumatex', 'Scribe', 'Sedal', 'Speed Stick', 'Sundown', 'Tío nacho', 'Trendy Boom', 'Vogue') NOT NULL;
+
+
+
+Enum Categorias
+Celebraciones
+Cosmeticos
+Cuidado personal
+Farmacia
+Mascotas
+Miscelánea
+Papelería
+
+
+
+
+
 
 
 

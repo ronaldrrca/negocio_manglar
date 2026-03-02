@@ -48,10 +48,12 @@ function crearCard(id_producto, imagen_producto, nombre_producto, descripcion_pr
     card_productos_descripcion.classList.add("card_productos_descripcion");
     
     // Agregamos un <span> con la clase directamente en el string
-const card_productos_advertencia_legal = `<br><br><span class="card_productos_advertencia_legal">Es un medicamento. No exceder su consumo. Si los síntomas persisten, consulte a su médico. Leer indicaciones y contraindicaciones en la etiqueta.</span>`;
+    const card_productos_advertencia_legal = `<br><br><span class="card_productos_advertencia_legal">Es un medicamento. No exceder su consumo. Si los síntomas persisten, consulte a su médico. Leer indicaciones y contraindicaciones en la etiqueta.</span>`;
+    const card_prodcuto_advertencia_visual = `<br><br><span class="card_productos_advertencia_legal">El color real del producto puede variar ligeramente dependiendo de la configuración de brillo, contraste y tipo de pantalla de su dispositivo móvil o computador.</span>`;
 
-
-    card_productos_descripcion.innerHTML = descripcion_producto + (categoria_producto === "farmacia" ? card_productos_advertencia_legal : "");
+    card_productos_descripcion.innerHTML = descripcion_producto + 
+    (categoria_producto === "farmacia" ? card_productos_advertencia_legal : "") + 
+    (categoria_producto === "cosmeticos" ? card_prodcuto_advertencia_visual : "");
     
     //elemento precio card
     const precio = precio_producto;
